@@ -1,0 +1,18 @@
+<script>
+  // tipe data yangmentimpan koleksi data dengan format key-value layaknya object.
+
+  // definisikan Map
+  const myMap = new Map([
+    ["name", "phone"],
+    ["brand", "xiaomi"],
+    ["color", "blue star"],
+  ]);
+
+  // getter dan setter
+  console.log(myMap);
+  console.log(myMap.size);
+  let getBrand = myMap.get("brand");
+  console.log(getBrand);
+  myMap.set("color", "blue dragon");
+  console.log(myMap.get("color"));
+</script>

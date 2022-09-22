@@ -1,0 +1,23 @@
+<script>
+  const minimal = (a, b) => {
+    let min;
+    if (a < b) {
+      min = a;
+      return a;
+    } else if (b < a) {
+      min = b;
+      return b;
+    } else {
+      return a;
+    }
+  };
+
+  console.log(minimal(4, 4));
+
+  //
+
+  const power = (a, b) => {
+    return a ** b;
+  };
+  console.log(power(2, 3));
+</script>
