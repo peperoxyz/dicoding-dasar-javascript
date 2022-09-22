@@ -1,0 +1,44 @@
+<script>
+  /**
+   * class menyediakan informasi tentan gsuat object. object = instance dari sebuah class. class = blueprint dalam mendefinisikan karakteristik sebuah object.
+   *
+   * di dalam class terdapat property dan method. property = karekteristik, method = kapabilitas/kemampuan suatu object.
+   *
+   * ada beberapa cara dalam membuat class: prototype, tanpa prototype.
+   */
+
+  // membuat class dengan pendekatan prototype
+
+  // buat class seperti membuat fungsi, tentukan atributnya
+  // function Mail() {
+  //   this.from = "pengirim@dicoding.com";
+  // }
+
+  // pendekatan prototype untuk menambah method
+  // Mail.prototype.sendMessage = function (msg, to) {
+  //   console.log(`you send: ${msg} to ${to} from ${this.from}`);
+  // };
+
+  // instansiasi object
+  // const mail1 = new Mail();
+
+  // pemanggilan
+  // mail1.sendMessage("Hi", "dea@gmail.com");
+
+  /*==================================================================*/
+
+  // membuat class dengan pendekatan prototype
+  function Mail(){
+    this.from = "pengirim@dicoding.com";
+    this.sendMessage = function(msg, to){
+      console.log(`you send: ${msg} to ${to} from ${this.from}`)
+    }
+  }
+  
+  // instansiasi object
+  const mail2 = new Mail();
+  mail2.sendMessage("halo", "penerima@dicodng.com")
+
+
+  // pemanggilan
+</script>

@@ -1,0 +1,87 @@
+<script>
+  // forEach function
+  const fruitsArray = ["banana", "orange", "mango", "papaya"];
+  // calling each element of the array with forEach
+  fruitsArray.forEach((fruit) => console.log(`I have to buy ${fruit}`));
+
+  // map function: return a new array
+  const fruit = fruitsArray.map((element) => {
+    return "i want to eat a " + element;
+  });
+
+  const newArray = fruitsArray.map((name) => {
+    return `${name}!`;
+  });
+
+  console.log(newArray);
+  console.log(fruit);
+
+  // filter function: return a new array, but the callback function have to return a boolean
+  const numbers = [0, 10, 2000, 3, 23, 95, 4];
+  const evenNumber = numbers.filter((number) => {
+    return number % 2 == 0;
+  });
+
+  console.log(evenNumber);
+
+  // reduce function: return a single value after iterating through the elements of an array, thereby reducing the array
+  const newNumbers = [1, 3, 5, 7];
+
+  // cara 1: function expression biasa
+  const summedNums = newNumbers.reduce(myFunction);
+  function myFunction(acc, currValue) {
+    return acc + currValue;
+  }
+
+  // cara 2: arrow function
+  const summedNums2 = newNumbers.reduce((acc, currValue) => {
+    return acc + currValue;
+  });
+
+  console.log(summedNums, summedNums2); // Output: 16
+
+  // some function: will return boolean value based on the condition given
+  const numberArray = [1, 2, 3, 4, 5];
+
+  const even = numberArray.some((element) => {
+    return element % 2 === 0;
+  });
+
+  console.log(even);
+
+  // find function: will return a single value which is the first element that found matched with the condition given
+  const names = ["dea", "rosa", "jaya", "dzulfikar", "faishal", "khadafi", "elsa"];
+  const findFirstLongtName = names.find((name) => {
+    return name.length > 5;
+  });
+
+  console.log(findFirstLongtName);
+
+  // sort function: will sort an array elements ascending (by default)
+  const numbs = ["blue", "red", "black", "white"];
+  sort = numbs.sort();
+  console.log(sort);
+
+  // if we want to sort the elements with our own standard, we need to make a compare function
+  // to sort numbers ascendingly
+
+  const array = [1, 44, 8, 309, 78, 55, 41];
+  const compareNumber = (a, b) => {
+    return a - b;
+  };
+
+  const sorting = array.sort(compareNumber);
+  console.log(sorting);
+
+  // every function: to check is every value on an array is match with the condition give, and will return a boolean value.
+  const scores = [90, 75, 80];
+  const minimumScore = 75;
+
+  const examPassed = scores.every((score) => {
+    return score >= minimumScore;
+  });
+
+  console.log(examPassed);
+
+  // forEach
+</script>
